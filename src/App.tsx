@@ -1,10 +1,12 @@
 import React from "react";
-import Index from "./components/todo/todoItem/Index";
+import Todo from "./components/todo/Todo";
 
 const App: React.FC = () => {
 	return (
 		<div>
-			<Index />
+			<Todo />
+			<Todo />
+			<Todo />
 		</div>
 	);
 };
