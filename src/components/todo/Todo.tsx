@@ -1,12 +1,22 @@
 import "./Todo.module.css";
-import React from "react";
+import React, { useState } from "react";
 
 const Todo: React.FC = () => {
+	let [color, setColor] = useState("green");
+	const onClickHandler = () => {
+		color === "green" ? setColor("pink") : setColor("green");
+	};
 	return (
 		<ul>
-			<li>One</li>
-			<li>Two</li>
-			<li>Three</li>
+			<li onClick={onClickHandler} style={{ backgroundColor: color }}>
+				One
+			</li>
+			<li onClick={onClickHandler} style={{ backgroundColor: color }}>
+				Two
+			</li>
+			<li onClick={onClickHandler} style={{ backgroundColor: color }}>
+				Three
+			</li>
 		</ul>
 	);
 };
